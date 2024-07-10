@@ -15,6 +15,7 @@ export const setFilterByGenre = (genre) => ({
   type: SET_FILTER_BY_GENRE,
   payload: genre,
 });
+
 export const setFilterBySource = (source) => ({
   type: SET_FILTER_BY_SOURCE,
   payload: source,

@@ -29,6 +29,7 @@ const HomePage = () => {
 
   const [selectedOption, setSelectedOption] = useState("all");
   const [genreFilter, setGenreFilter] = useState("");
+  const [sourceFilter, setSourceFilter] = useState("");
   const [generos, setGeneros] = useState([]);
   const [searchMessage, setSearchMessage] = useState("");
 
@@ -47,6 +48,7 @@ const HomePage = () => {
     filterByGenre,
     filterBySource,
     genreFilter,
+    sourceFilter,
   ]);
 
   const fetchGeneros = async () => {
@@ -88,18 +90,23 @@ const HomePage = () => {
         (game) => game.genero === filterByGenre
       );
     }
-
-    if (filterBySource !== "all") {
-      filteredVideoGames = filteredVideoGames.filter(
-        (game) => game.source === filterBySource
+console.log(filteredVideoGames)
+    if (sourceFilter !== "all") {
+      filteredVideoGames = filteredVideoGames.filter((game) =>
+        game.source.toLowerCase().includes(sourceFilter.toLowerCase())
       );
+    }else{
+      console.log("else")
+      filteredVideoGames = filteredVideoGames;
+
+  
+      
     }
 
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const results = filteredVideoGames.slice(indexOfFirstItem, indexOfLastItem);
 
-  
     dispatch(setSearchResults(results));
   };
 
@@ -147,6 +154,12 @@ const HomePage = () => {
     setGenreFilter(cleanValue);
   };
 
+  const handleSourceChange = (e) => {
+    // Validar caracteres especiales y longitud máxima
+    const value = e.target.value;
+    setSourceFilter(value);
+  };
+
   const handleGenreSearch = () => {
     dispatch(setFilterByGenre(genreFilter));
   };
@@ -164,7 +177,7 @@ const HomePage = () => {
     <div className="home-page">
       <div className="navigation-button-container">
         <button className="create-button" onClick={handleBackToHome}>
-          Volver al Inicio
+          Limpiar Filtros
         </button>
       </div>
 
@@ -192,39 +205,17 @@ const HomePage = () => {
             Crear
           </button>
         </div>
-
-        <div className="radio-options-container">
-          <h2>Selecciona una opción:</h2>
-          <label>
-            <input
-              type="radio"
-              name="source"
-              value="all"
-              checked={selectedOption === "all"}
-              onChange={handleChange}
-            />
-            Todos los Video Juegos
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="source"
-              value="db"
-              checked={selectedOption === "db"}
-              onChange={handleChange}
-            />
-            Video Juegos de la BD
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="source"
-              value="api"
-              checked={selectedOption === "api"}
-              onChange={handleChange}
-            />
-            Video Juegos del API
-          </label>
+        <div className="genre-search-container">
+          <h2>Filtrar por fuente:</h2>
+          <select
+            className="modern-select"
+            value={sourceFilter}
+            onChange={handleSourceChange}
+          >
+            <option value="all">Todos los Video Juegos</option>
+            <option value="db">Video Juegos de la BD</option>
+            <option value="api">Video Juegos del API</option>
+          </select>
         </div>
 
         <div className="genre-search-container">
@@ -241,9 +232,7 @@ const HomePage = () => {
               </option>
             ))}
           </select>
-          <button className="create-button" onClick={handleGenreSearch}>
-            Filtrar
-          </button>
+          
         </div>
       </div>
 
