@@ -29,7 +29,7 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      Rating: {
+      rating: {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
@@ -39,7 +39,7 @@ module.exports = (sequelize) => {
       },
     },
     {
-      timestamps: false,
+      timestamps: false, // Desactivar la generación de createdAt y updatedAt
       freezeTableName: true,
     }
   );

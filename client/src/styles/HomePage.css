@@ -1,0 +1,322 @@
+/* HomePage.css */
+
+.home-page {
+    background-image: url('../img/fondo.jpg'); 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinear el contenido en la parte superior */
+    align-items: center;
+    height: 80%;
+    padding-top: 20px; /* Agregar un espacio superior */
+    box-sizing: border-box; /* Incluir padding en el cálculo de la altura */
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+  }
+  .home-page h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+    background-color: #e0f7dfe5; /* Color de fondo para el contenedor interno */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(212, 11, 11, 0.86);
+  }
+  
+  .home-page-container {
+    background-color: #7fa0f1e5; /* Color de fondo para el contenedor interno */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para resaltar el contenedor */
+  }
+  
+  .search-bar {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex; /* Utiliza flexbox para alinear elementos */
+  }
+  
+  .search-bar input {
+    flex: 1; /* Hace que el input ocupe el espacio restante */
+    padding: 12px; /* Ajusta el padding para más espacio interno */
+    font-size: 16px; /* Aumenta el tamaño de la fuente */
+    border: 2px solid #ccc; /* Cambia el grosor del borde */
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .search-bar button {
+    padding: 12px 20px; /* Ajusta el padding del botón */
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  /* HomePage.css */
+  
+  .home-page {
+      padding: 20px;
+    }
+    
+    .card-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 columnas por fila */
+      gap: 20px; /* Espacio entre las tarjetas */
+    }
+    
+    /* Estilos CSS para la paginación */
+  .pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    
+
+    .pagination button {
+      margin: 0 5px;
+      padding: 5px 10px;
+      border: 1px solid #007bff;
+      border-radius: 5px;
+      background-color: #ffffff;
+      color: #007bff;
+      cursor: pointer;
+    }
+
+    .pagination button.active {
+      background-color: #007bff;
+      color: #ffffff;
+      border: 1px solid #0056b3;
+    }
+
+
+  .search-bar button:hover {
+    background-color: #0056b3;
+  }
+  .home-page {
+      padding: 20px;
+      position: relative; /* Establece posición relativa para el contenedor principal */
+    }
+    
+    .button-container {
+      position: absolute;
+      top: 20px; /* Ajusta la distancia desde la parte superior */
+      right: 20px; /* Ajusta la distancia desde el borde derecho */
+    }
+    
+    .create-button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .create-button:hover {
+      background-color: #0056b3;
+    }
+  
+    .home-page-container {
+      display: flex;
+      justify-content: flex-end; /* Alinea todo el contenido a la derecha */
+      padding: 20px; /* Añade un espacio de relleno alrededor del contenido */
+    }
+    
+    .filter-container {
+      display: flex;
+      align-items: center;
+      gap: 10px; /* Espacio entre elementos dentro del contenedor */
+    }
+    
+    .filter-container label {
+      font-weight: bold;
+    }
+    
+    .filter-container select {
+      padding: 8px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: #f8f8f8;
+      width: 150px; /* Ancho del select */
+    }
+    
+    /* Estilos para los options dentro de los selects */
+    .filter-container select option {
+      font-size: 14px;
+    }
+  
+    /* Estilos para el contenedor de opciones de radio */
+  .radio-options-container {
+    padding: center;
+    border-radius: center;
+    margin-top: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  /* Estilos para el título h2 */
+  .radio-options-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-right: 20px;
+  }
+  
+  /* Estilos para cada opción de radio (label y input) */
+  .radio-options-container label {
+    display: flex; /* Usa flexbox para alinear label y input en una fila */
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .radio-options-container input[type="radio"] {
+    margin-right: 5px; /* Margen derecho entre el input y el texto */
+  }
+  
+  .custom-search-bar {
+    width: 300px; /* Ancho del SearchBar */
+    padding: 8px; /* Espacio interno */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 5px; /* Borde redondeado */
+    font-size: 16px; /* Tamaño de fuente */
+  }
+  
+  .custom-search-bar:focus {
+    outline: none; /* Elimina el contorno al hacer foco */
+    border-color: #007bff; /* Cambia el color del borde al hacer foco */
+  }
+  
+  .home-page-container {
+    display: flex;
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    align-items: center;
+    margin-bottom: 20px; /* Margen inferior entre secciones */
+  }
+  
+  /* Estilos para el contenedor de filtros */
+  .filter-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Margen a la derecha para separar del siguiente elemento */
+  }
+  
+  /* Estilos para las etiquetas y selects dentro del contenedor de filtros */
+  .filter-container label,
+  .filter-container select {
+    margin-right: 10px; /* Margen derecho entre elementos */
+  }
+  
+  /* Estilos para el contenedor de botones */
+  .button-container {
+    margin-bottom: 20px; /* Margen inferior entre secciones */
+  }
+  
+  /* Estilos para el botón de creación */
+  .create-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Estilos para el contenedor de opciones de radio */
+  .radio-options-container {
+    margin-bottom: 20px; /* Margen inferior entre secciones */
+  }
+  
+  /* Estilos para el título h2 dentro del contenedor de opciones de radio */
+  .radio-options-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px; /* Margen inferior */
+  }
+  
+  /* Estilos para los labels y inputs de opciones de radio */
+  .radio-options-container label {
+    display: block;
+    margin-bottom: 10px; /* Margen inferior entre elementos */
+  }
+
+  .navigation-button-container {
+    display: flex;
+    justify-content: flex-start; /* Alinea los elementos al inicio (izquierda) */
+    margin-top: 10px; /* Añadir margen superior si es necesario */
+    width: 100%; 
+  }
+
+  .modern-select {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  .modern-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+  
+  /* Estilos adicionales para la flecha del selector */
+  .modern-select::after {
+    content: '▼';
+    font-size: 12px;
+    color: #777;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+/* Estilos para el componente SearchBar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Para manejar el contenido en varias líneas si es necesario */
+}
+
+/* Estilos para el input de búsqueda */
+.search-input {
+  margin-right: 10px; /* Espacio derecho entre el input y el botón */
+}
+
+.search-input input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 300px; /* Ancho deseado del input */
+}
+
+/* Estilos para el contenedor del mensaje de error */
+.error-message-container {
+  margin-top: 5px; /* Espacio superior para separar del input */
+}
+
+/* Estilos para el mensaje de error */
+.error-message {
+  color: red;
+  font-size: 14px;
+}

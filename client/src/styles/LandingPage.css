@@ -1,0 +1,44 @@
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh; /* Establece el alto del contenedor al 100% del viewport */
+  background-image: url(''); /* Ruta a tu imagen de fondo */
+  background-size: cover; /* Cubre todo el área del contenedor */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita repetir la imagen */
+}
+
+  
+  .landing-page h1 {
+    background-color: rgba(232, 20, 20, 0.614); /* Fondo semitransparente */
+    padding: 20px; /* Añade espacio alrededor del título */
+    font-family: 'Arial', sans-serif; /* Establece la fuente */
+    font-size: 40px; /* Tamaño de la fuente */
+    font-weight: bold; /* Peso de la fuente */
+    color: #f5f6f5c7; /* Color del texto */
+    margin-bottom: 20px; /* Añade un margen inferior al título */
+    border-radius: 25px;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .landing-page button {
+    padding: 10px 70px;
+    font-size: 30px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave al cambiar de color */
+  }
+  
+  .landing-page button:hover {
+    background-color: #0056b3; /* Color diferente al pasar el cursor sobre el botón */
+  }
+  
